@@ -1,5 +1,5 @@
 -- Query 1
-SELECT k.nomor_kendaraan
+SELECT k.nomor_kendaraan, tp.waktu_keluar
 FROM transaksi_parkir tp
 JOIN kendaraan k ON tp.id_kendaraan = k.id_kendaraan
 WHERE tp.waktu_keluar IS NOT NULL;
