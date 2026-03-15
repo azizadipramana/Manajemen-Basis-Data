@@ -2,7 +2,7 @@
 SELECT k.nomor_kendaraan
 FROM transaksi_parkir tp
 JOIN kendaraan k ON tp.id_kendaraan = k.id_kendaraan
-WHERE tp.waktu_keluar IS NULL;
+WHERE tp.waktu_keluar IS NOT NULL;
 
 -- Query 2
 SELECT tp.id_transaksi, tp.waktu_masuk, tp.waktu_keluar, zp.nama_zona
