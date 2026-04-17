@@ -146,6 +146,9 @@ INSERT INTO kendaraan (id_kendaraan, nomor_kendaraan, jenis_kendaraan, id_penggu
 (20, 'BK1020AT', 'Motor', 20);
 
 
+-- insert transaksi parkir menggunakan stored procedure pada file stored_procedure_tugas8.sql di repo ini
+
+
 INSERT INTO izin_zona_kendaraan (id_izin, jenis_kendaraan, id_zona) VALUES
 (1, 'Motor', 1),
 (2, 'Mobil', 2),
