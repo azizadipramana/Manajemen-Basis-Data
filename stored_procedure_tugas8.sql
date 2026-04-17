@@ -40,5 +40,24 @@ CALL input_kendaraan_masuk(
 );
 
 -- stored procedure soal 2
+DELIMITER $$
+
+CREATE PROCEDURE laporan_zona_parkir()
+BEGIN
+    SELECT 
+        z.nama_zona,
+        z.kapasitas,
+        COUNT(t.id_transaksi) AS jumlah_kendaraan_parkir,
+        (z.kapasitas - COUNT(t.id_transaksi)) AS sisa_kapasitas
+    FROM zona_parkir z
+    LEFT JOIN transaksi_parkir t 
+        ON z.id_zona = t.id_zona
+        AND t.waktu_keluar IS NULL
+    GROUP BY z.id_zona, z.nama_zona, z.kapasitas;
+END$$
+
+DELIMITER ;
+
 
 -- cara menggunakan soal 2
+CALL laporan_zona_parkir();
