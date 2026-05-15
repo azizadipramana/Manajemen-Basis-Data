@@ -8,7 +8,8 @@ INSERT INTO transaksi_parkir (
     waktu_keluar,
     id_kendaraan,
     id_petugas,
-    id_zona
+    id_zona,
+    total_bayar
 )
 VALUES (
     21,
@@ -16,9 +17,9 @@ VALUES (
     '2026-03-06 11:00:00',
     2,
     1,
-    2
+    2,
+    15000
 );
-
 -- contoh gagal 
 
 INSERT INTO transaksi_parkir (
@@ -27,7 +28,8 @@ INSERT INTO transaksi_parkir (
     waktu_keluar,
     id_kendaraan,
     id_petugas,
-    id_zona
+    id_zona, 
+    total_bayar
 )
 VALUES (
     22,
@@ -35,7 +37,8 @@ VALUES (
     '2026-03-06 10:00:00',
     2,
     1,
-    1
+    1, 
+    10000
 );
 
 
