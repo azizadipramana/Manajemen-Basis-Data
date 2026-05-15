@@ -58,3 +58,8 @@ CREATE TABLE tarif_kendaraan (
     tarif_per_jam DECIMAL(10,2) NOT NULL
 );
 
+
+-- untuk bukti saja
+UPDATE zona_parkir
+SET kapasitas = 1
+WHERE id_zona = 1;
