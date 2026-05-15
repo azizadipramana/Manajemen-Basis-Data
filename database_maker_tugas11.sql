@@ -59,10 +59,6 @@ CREATE TABLE tarif_kendaraan (
 );
 
 
--- untuk bukti saja
-UPDATE zona_parkir
-SET kapasitas = 1
-WHERE id_zona = 1;
 
 
 INSERT INTO pengguna (id_pengguna, no_identitas, nama, status) VALUES
@@ -130,6 +126,12 @@ INSERT INTO zona_parkir (id_zona, nama_zona, kapasitas, tarif_per_jam) VALUES
 (18, 'Zona R', 25, 3000.00),
 (19, 'Zona S', 70, 2000.00),
 (20, 'Zona T', 65, 3000.00);
+
+-- untuk bukti saja
+UPDATE zona_parkir
+SET kapasitas = 1
+WHERE id_zona = 1;
+
 
 INSERT INTO kendaraan (id_kendaraan, nomor_kendaraan, jenis_kendaraan, id_pengguna) VALUES
 (1, 'BK1001AA', 'Motor', 1),
