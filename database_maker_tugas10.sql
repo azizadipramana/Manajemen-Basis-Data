@@ -36,6 +36,7 @@ CREATE TABLE transaksi_parkir (
     id_kendaraan INT NOT NULL,
     id_petugas INT NOT NULL,
     id_zona INT NOT NULL,
+    total_bayar DECIMAL(10,2) NOT NULL, 
     CONSTRAINT fk_transaksi_kendaraan
         FOREIGN KEY (id_kendaraan) REFERENCES kendaraan(id_kendaraan),
     CONSTRAINT fk_transaksi_petugas
