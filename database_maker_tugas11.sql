@@ -63,3 +63,11 @@ CREATE TABLE tarif_kendaraan (
 UPDATE zona_parkir
 SET kapasitas = 1
 WHERE id_zona = 1;
+
+
+INSERT INTO izin_zona_kendaraan (id_izin, jenis_kendaraan, id_zona) VALUES
+(1, 'Motor', 1),
+(2, 'Mobil', 2),
+(3, 'Motor', 3),
+(4, 'Mobil', 4),
+(5, 'Motor', 5);
